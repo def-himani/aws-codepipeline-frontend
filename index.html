@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Photo Album Search</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <h1>Photo Album Search</h1>
+
+    <!-- SEARCH -->
+    <div class="card">
+        <h2>Search Photos</h2>
+        <input id="searchQuery" type="text" placeholder="Search for 'cat', 'tree', ..." />
+        <button onclick="searchPhotos()">Search</button>
+    </div>
+
+    <!-- UPLOAD -->
+    <div class="card">
+        <h2>Upload Photo</h2>
+
+        <input id="photoFile" type="file" accept="image/*">
+        <input id="customLabels" type="text" placeholder="Custom labels (comma separated)">
+        <button onclick="uploadPhoto()">Upload</button>
+    </div>
+
+    <h2>Results</h2>
+    <div id="results"></div>
+
+    <!-- IMPORTANT: Include the API Gateway SDK -->
+    <script src="./sdk/apigClient.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
